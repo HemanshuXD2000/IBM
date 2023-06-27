@@ -6,15 +6,15 @@ import java.util.UUID;
 public class EmployeeFactory {
 
 	private Scanner scanner = new Scanner(System.in);
-
+	
 	public Employee createEmployee() {
 		// TODO Auto-generated method stub
 		Employee emp = new Employee();
 		System.out.print("Enter Employee Name: ");
 		String eName = scanner.next();
 		System.out.print("Enter Employee Salary: ");
-		int eSalary = scanner.nextInt();
-
+		int eSalary=scanner.nextInt();
+		
 		System.out.print("Enter Department Name: ");
 		String dName = scanner.next();
 		Department d = createDepartment(dName);
@@ -50,5 +50,8 @@ public class EmployeeFactory {
 		l.setZipCode(zip);
 		return l;
 	}
-
+	
+	
+	
+	
 }

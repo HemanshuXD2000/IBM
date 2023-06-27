@@ -2,6 +2,7 @@ package employeeFactory;
 
 import java.util.Enumeration;
 import java.util.Scanner;
+import java.util.UUID;
 import java.util.Vector;
 
 public class App {
@@ -19,6 +20,7 @@ public class App {
 			System.out.println("3. Find Employee by Id...");
 			// System.out.println("4. Find Employee by Name...");
 			System.out.println("4. Remove Employee...");
+			System.out.println("5. Update Employee...");
 			System.out.println("0. Exit...");
 			System.out.println("Enter Your Choice");
 			choice = scanner.nextInt();
@@ -54,7 +56,7 @@ public class App {
 				break;
 
 			case 4:
-				System.out.println("Enter the emplyee name to remove :");
+				System.out.println("Enter the employee name to remove :");
 				String removeName = scanner.next();
 				boolean removed = false;
 				Enumeration<Employee> e3 = v.elements();
@@ -72,6 +74,41 @@ public class App {
 					System.out.println("Enployee not Found");
 				}
 				break;
+				
+			case 5:
+				System.out.println("Enter the employee Id to update: ");
+				String updateId = scanner.next();
+				Enumeration<Employee> update = v.elements();
+				while (update.hasMoreElements()) {
+					Employee employee = update.nextElement();
+					Department department = new Department();
+					Location location = new Location();
+					if (employee.getEmployeeId().equals(updateId)) {
+						System.out.println("Enter new name: ");
+						String newName = scanner.next();
+						System.out.println("Enter new Salary: ");
+						int newSalary = scanner.nextInt();
+						System.out.println("Enter new Department: ");
+						String newDept = scanner.next();
+						System.out.println("Enter new City Name: ");
+						String newCity = scanner.next();
+						System.out.println("Enter new ZipCode: ");
+						String newZip = scanner.next();
+						System.out.println("Enter new Country Name: ");
+						String newCountry = scanner.next();
+						employee.setEmployeeName(newName);
+						employee.setEmployeeSalary(newSalary);
+						employee.setDepartment(department);
+						department.setDepartmentName(newDept);
+						department.setLocation(location);
+						location.setCityName(newCity);
+						location.setZipCode(newZip);
+						location.setCountryName(newCountry);
+						department.setDepartmentId(UUID.randomUUID().toString());
+						location.setLocationId(UUID.randomUUID().toString());
+						System.out.println("Updated Employee: " +employee);
+					}
+				}break;
 
 			case 0:
 				System.out.println("Bye...!");
