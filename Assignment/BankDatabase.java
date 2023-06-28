@@ -28,7 +28,7 @@ public class BankDatabase {
 				case 2:
 					System.out.println("Enter amount to Withdraw: ");
 					double withdrawAmount = scanner.nextDouble();
-					account.deposit(withdrawAmount);
+					account.withdraw(withdrawAmount);
 					break;
 				case 3:
 					double balance = account.getBalance();
