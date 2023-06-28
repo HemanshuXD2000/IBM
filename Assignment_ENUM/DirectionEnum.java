@@ -1,5 +1,9 @@
 package project1;
 
+//Write a Java program to implement 
+//an enum called "Direction" with constants 
+//representing the cardinal directions (North, South, East, West).
+
 public class DirectionEnum {
 	
 	public enum Direction{

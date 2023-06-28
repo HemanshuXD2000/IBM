@@ -1,5 +1,9 @@
 package project1;
 
+//Write a Java program to create 
+//an enum called "Weekend" with constants 
+//representing the days of the weekend.
+
 public class WeekendExample {
 	public enum Weekend {
 

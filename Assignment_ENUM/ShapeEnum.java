@@ -1,5 +1,9 @@
 package project1;
 
+//Write a Java program to implement 
+//an enum called "Shape" with constants 
+//representing different geometric shapes.
+
 public class ShapeEnum {
 
 	public enum Shape{

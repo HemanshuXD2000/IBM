@@ -1,5 +1,9 @@
 package project1;
 
+//Write a Java program that defines 
+//an enum called "Months" with constants 
+//representing the months of the year.
+
 public class MonthsEnum {
 
 	public enum Months{
