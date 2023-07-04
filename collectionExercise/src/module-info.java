@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author hdhar
- *
- */
-module collectionExercise {
-}
