@@ -1,0 +1,57 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>MyController</servlet-name>
+  	<display-name>MyController</display-name>
+  	<description></description>
+  	<servlet-class>org.example.controller.MyController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Errors</servlet-name>
+  	<display-name>Errors</display-name>
+  	<description></description>
+  	<servlet-class>org.example.view.Errors</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddNewCourse</servlet-name>
+  	<display-name>AddNewCourse</display-name>
+  	<description></description>
+  	<servlet-class>org.example.view.AddNewCourse</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DisplayCourse</servlet-name>
+  	<display-name>DisplayCourse</display-name>
+  	<description></description>
+  	<servlet-class>org.example.view.DisplayCourse</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RegisterController</servlet-name>
+  	<display-name>RegisterController</display-name>
+  	<description>reg_controller.do</description>
+  	<servlet-class>org.example.controller.RegisterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyController</servlet-name>
+  	<url-pattern>/controller.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Errors</servlet-name>
+  	<url-pattern>/error.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddNewCourse</servlet-name>
+  	<url-pattern>/success.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DisplayCourse</servlet-name>
+  	<url-pattern>/display.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RegisterController</servlet-name>
+  	<url-pattern>/reg_controller.do</url-pattern>
+  </servlet-mapping>
+</web-app>
