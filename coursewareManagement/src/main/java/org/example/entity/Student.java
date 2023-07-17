@@ -10,7 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.example.model.Course;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,23 +29,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @Data
 public class Student {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int student_id;
-	
-	private String student_name;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(
-			name = "student_course",
-			joinColumns = @JoinColumn(name="student_id"),
-			inverseJoinColumns = @JoinColumn(name = "course_id"))
+	private String student_name;
 	
-	private List<CourseEntity> courses;
+	private String course_name;
 	
-	public List<CourseEntity> getCourses(){
-		return courses;
-	}
+//	@ManyToOne
+//	@JoinColumn(name = "course_id")
+//	private CourseEntity course;
 
 }

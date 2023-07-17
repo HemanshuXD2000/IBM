@@ -36,14 +36,5 @@ public class CourseEntity {
 		super();
 		this.course_name = course_name;
 		this.course_price = course_price;
-	}
-	
-	@ManyToMany(mappedBy = "courses")
-    private List<Student> students;
-	
-	public List<Student> getStudents() {
-        return students;
-    }
-
-		       
+	}   
 }
