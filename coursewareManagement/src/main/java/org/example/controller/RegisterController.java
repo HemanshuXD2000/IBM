@@ -2,9 +2,6 @@ package org.example.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-
 import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,10 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.example.entity.CourseEntity;
 import org.example.entity.Student;
 import org.example.factory.MySessionFactory;
-import org.example.model.Course;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 
 public class RegisterController extends HttpServlet {
