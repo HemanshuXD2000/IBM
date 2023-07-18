@@ -29,7 +29,9 @@ session2.getTransaction().commit();
 
 <div class = "container">
 	<h1>League Added Successfully....</h1>
-	<table class="table table.striped w-auto">
+	<hr>
+	<br/>
+	<table class="table table-striped w-auto">
 		<tr>
 			<th>Name</th>
 			<th>Season</th>
@@ -41,6 +43,7 @@ session2.getTransaction().commit();
 			<td><%=league.getYear()%></td>
 		</tr>
 	</table>
+	<a href = "index.jsp">Homepage</a>
 	</div>
 
 </body>

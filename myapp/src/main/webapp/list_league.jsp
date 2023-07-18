@@ -27,7 +27,7 @@
 	%>
 	<div class = "container">
 	<h1>Available Leagues</h1>
-	<table class="table table.striped w-auto">
+	<table class="table table-striped w-auto">
 		<tr>
 			<th>Name</th>
 			<th>Season</th>
@@ -45,6 +45,7 @@
 		}
 		%>
 	</table>
+	<a href = "index.jsp">Homepage</a>
 </div>
 </body>
 </html>
