@@ -9,6 +9,7 @@
 <div class="container">
 <h2>Customer Details</h2>
 <hr>
+<a th:href="@{/customer/showFormForAdd}" class="btn btn-primary btn-sm mb-3" >Add Customer</a>
 <table class="table table-striped w-auto">
 		<thead>
 			<tr>
@@ -20,7 +21,7 @@
 		</thead>
 		<tbody>
 			<tr th:each="tempCustomer : ${customers}">
-				<td th:text="${tempCustomer.id}" />
+				<td th:text="${tempCustomer.customerId}" />
 				<td th:text="${tempCustomer.firstName}" />
 				<td th:text="${tempCustomer.lastName}"/>
 				<td th:text="${tempCustomer.email}"/>
