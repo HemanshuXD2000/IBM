@@ -27,4 +27,22 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerRepository.getAllCustomers();
 	}
 
+	@Override
+	public Customer getCustomerById(String customerId) {
+		// TODO Auto-generated method stub
+		return customerRepository.getCustomerById(customerId);
+	}
+
+	@Override
+	public Customer updateCustomerById(String customerId, Customer customer) {
+		// TODO Auto-generated method stub
+		return customerRepository.updateCustomerById(customerId, customer);
+	}
+
+	@Override
+	public String deleteCustomerById(String customerId) {
+		// TODO Auto-generated method stub
+		return customerRepository.deleteCustomerById(customerId);
+	}
+
 }

@@ -13,16 +13,16 @@ import com.example.model.Customer;
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository {
 
-	private final Map<Integer, Customer> customers;
+	private final Map<String, Customer> customers;
 	
 	{
-		customers = new  HashMap<Integer, Customer>();
+		customers = new  HashMap<String, Customer>();
 	}
 	
 	@Override
 	public Customer createCustomer(Customer customer) 
 	{
-		customers.put(new Random().nextInt(1000), customer);
+		customers.put(customer.getCustomerId(), customer);
 		return customer;
 		
 	}
@@ -32,6 +32,49 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	{
 		Collection<Customer> collection = customers.values();
 		return collection;
+	}
+
+	@Override
+	public Customer getCustomerById(String customerId) {
+		Customer customer = customers.get(customerId);
+		if(customer == null)
+		{
+			return null;			
+		}
+		else
+		{
+			return customer;
+		}
+	}
+
+	@Override
+	public Customer updateCustomerById(String customerId, Customer customer) {
+		Customer tempCustomer = customers.get(customerId);
+		if(customer == null)
+		{
+			return null;			
+		}
+		else
+		{
+			tempCustomer.setFirstName(customer.getFirstName());
+			tempCustomer.setLastName(customer.getLastName());
+			tempCustomer.setEmail(customer.getEmail());
+			return tempCustomer;
+		}
+	}
+
+	@Override
+	public String deleteCustomerById(String customerId) {
+		Customer customer = customers.get(customerId);
+		if(customer != null) 
+		{
+			customers.remove(customerId);
+			return "customer deleted...";
+		}
+		else
+		{
+			return "customer not found...";
+		}
 	}
 
 }
