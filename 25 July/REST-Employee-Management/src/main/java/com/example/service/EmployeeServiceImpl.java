@@ -39,5 +39,30 @@ public class EmployeeServiceImpl implements EmployeeService{
 		}
 	}
 
+	@Override
+	public Employee updateEmployeeById(Employee employee) {
+		Optional<Employee> emp = employeeRepository.findById(employee.getEmployeeId());
+		
+		if(emp.isEmpty())
+		{
+			return null;
+		}
+		else
+		{
+			emp.get().setFirstName(employee.getFirstName());
+			emp.get().setLastName(employee.getLastName());
+			emp.get().setSalary(employee.getSalary());
+			
+			employeeRepository.save(emp.get());
+			
+			return emp.get();
+		}
+	}
+
+	@Override
+	public void deleteEmployee(int employeeId) {
+		employeeRepository.deleteById(employeeId);
+	}
+
 	
 }
