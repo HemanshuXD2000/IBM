@@ -1,12 +1,12 @@
 package com.example.rest;
 
-import java.time.zone.ZoneRulesException;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.exception.EmployeeNotFoundException;
 import com.example.model.Employee;
+import com.example.model.ErrorResponseModel;
 import com.example.service.EmployeeService;
 
 import lombok.AllArgsConstructor;
@@ -26,6 +28,16 @@ import lombok.AllArgsConstructor;
 public class EmployeeController {
 	
 	private final EmployeeService employeeService;
+	
+	@ExceptionHandler
+	public ResponseEntity<ErrorResponseModel> handleErr(EmployeeNotFoundException e)
+	{
+		ErrorResponseModel model = new ErrorResponseModel();
+		model.setErrorMessage(e.getMessage());
+		model.setErrorCode(HttpStatus.NOT_FOUND.value());
+		model.setErrorReportingTime(System.currentTimeMillis());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(model);
+	}
 	
 	@PostMapping
 	public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee)
@@ -69,9 +81,10 @@ public class EmployeeController {
 	}
 	
 	@DeleteMapping("/{employeeId}")
-	public ResponseEntity<String> deleteEmployee(@PathVariable int employeeId)
+	public ResponseEntity<?> deleteEmployee(@PathVariable("employeeId") int employeeId)
 	{
 		employeeService.deleteEmployee(employeeId);
-		return new ResponseEntity<>("Employee Deleted Successfully...",HttpStatus.OK);
+		return ResponseEntity.status(HttpStatus.OK).body("Employee Deleted..");
+
 	}
 }
