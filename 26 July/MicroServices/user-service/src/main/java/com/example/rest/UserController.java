@@ -1,5 +1,6 @@
 package com.example.rest;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.dto.UserDto;
 import com.example.model.UserEntity;
 import com.example.service.UserService;
 
@@ -36,9 +38,15 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.OK).body(userService.createUser(user));
 	}
 	
+//	@GetMapping
+//	public ResponseEntity<List<UserEntity>> getUsers()
+//	{
+//		return ResponseEntity.ok(userService.listUser());
+//	}
+	
 	@GetMapping
-	public ResponseEntity<List<UserEntity>> getUsers()
+	public ResponseEntity<Collection<UserDto>> getUsers()
 	{
-		return ResponseEntity.ok(userService.listUser());
+		return ResponseEntity.ok(userService.query());
 	}
 }

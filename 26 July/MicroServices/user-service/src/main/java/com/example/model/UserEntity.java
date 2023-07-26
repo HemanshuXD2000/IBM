@@ -1,7 +1,5 @@
 package com.example.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,10 +19,11 @@ import lombok.Setter;
 @Entity
 @Table(name="Users")
 public class UserEntity {
+	
 	private String userId;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@JsonIgnore
+	
 	private int id;
 	
 	private String firstName;
@@ -35,7 +34,7 @@ public class UserEntity {
 	
 	private String password;
 	
-	@JsonIgnore
+	
 	private String encryptedPassword;
 
 	public UserEntity(String userId, String firstName, String lastName, String email, String password,
@@ -47,6 +46,14 @@ public class UserEntity {
 		this.email = email;
 		this.password = password;
 		this.encryptedPassword = encryptedPassword;
+	}
+
+	public UserEntity(int id, String firstName, String lastName, String email) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
 	}
 	
 }
