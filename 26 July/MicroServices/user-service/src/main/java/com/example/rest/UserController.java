@@ -1,9 +1,12 @@
 package com.example.rest;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.dto.UserDto;
 import com.example.model.UserEntity;
 import com.example.service.UserService;
+import com.example.ui.UserRequestModel;
+import com.example.ui.UserResponseModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 
@@ -24,29 +30,28 @@ import lombok.AllArgsConstructor;
 public class UserController {
 
 	private final UserService userService;
+	private final ModelMapper modelMapper;
 	
 	@PostMapping
-	public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user)
+	public ResponseEntity<UserResponseModel> createUser(@RequestBody UserRequestModel userRequestModel)
 	{
-		String userId = UUID.randomUUID().toString();
-		user.setUserId(userId);
-		
-		String pass = user.getPassword();
-		String encrypt = new StringBuilder(pass).reverse().toString();
-		user.setEncryptedPassword(encrypt);
-		
-		return ResponseEntity.status(HttpStatus.OK).body(userService.createUser(user));
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		UserDto userDto = modelMapper.map(userRequestModel, UserDto.class);
+		userDto.setUserId(UUID.randomUUID().toString());
+		UserEntity userEntity = userService.createUser(userDto);
+		return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(userEntity, UserResponseModel.class));
 	}
 	
-//	@GetMapping
-//	public ResponseEntity<List<UserEntity>> getUsers()
-//	{
-//		return ResponseEntity.ok(userService.listUser());
-//	}
-	
 	@GetMapping
-	public ResponseEntity<Collection<UserDto>> getUsers()
+	public ResponseEntity<List<UserResponseModel>> listAllUsers()
 	{
-		return ResponseEntity.ok(userService.query());
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		List<UserEntity> list = userService.listUser();
+		List<UserResponseModel> userResponseModels = new ArrayList<UserResponseModel>();
+		for(UserEntity u : list)
+		{
+			userResponseModels.add(modelMapper.map(u, UserResponseModel.class));
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(userResponseModels);
 	}
 }

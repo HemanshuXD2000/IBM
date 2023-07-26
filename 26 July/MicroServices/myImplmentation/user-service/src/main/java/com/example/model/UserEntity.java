@@ -47,4 +47,13 @@ public class UserEntity {
 		this.password = password;
 		this.encryptedPassword = encryptedPassword;
 	}
+
+	public UserEntity(int id, String firstName, String lastName, String email) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	
 }

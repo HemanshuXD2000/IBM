@@ -3,6 +3,9 @@ package com.example.service;
 import java.util.Collection;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+import org.modelmapper.spi.MatchingStrategy;
 import org.springframework.stereotype.Service;
 
 import com.example.dto.UserDto;
@@ -16,25 +19,22 @@ import lombok.AllArgsConstructor;
 public class UserServiceImpl implements UserService {
 
 	private final UserRepository userRepository;
+	private final ModelMapper modelMapper;
 
 	@Override
-	public UserEntity createUser(UserEntity user) {
-		// TODO Auto-generated method stub
-		return userRepository.save(user);
+	public UserEntity createUser(UserDto userDto) {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		UserEntity userEntity = modelMapper.map(userDto, UserEntity.class);
+		StringBuffer sb = new StringBuffer();
+		sb.append(userDto.getPassword());
+		userEntity.setEncryptedPassword(sb.reverse().toString());
+		return userRepository.save(userEntity);
 	}
-
 
 	@Override
 	public List<UserEntity> listUser() {
-		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
 
-
-	@Override
-	public Collection<UserDto> query() {
-		// TODO Auto-generated method stub
-		return userRepository.customFind();
-	}
 
 }
