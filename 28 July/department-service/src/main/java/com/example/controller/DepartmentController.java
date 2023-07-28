@@ -26,7 +26,7 @@ public class DepartmentController {
 	}
 	
 	@GetMapping("/{departmentName}")
-	public Department findByName(@PathVariable("departmentName") String departmentName)
+	public Department findByName(@PathVariable String departmentName)
 	{
 		return departmentService.findDepartmentByName(departmentName);
 	}
