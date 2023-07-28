@@ -6159,3 +6159,352 @@ java.lang.NullPointerException: Cannot invoke "com.example.ui.DepartmentDto.getD
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
+2023-07-28T16:07:22.430+05:30  INFO [employee-service,,] 9376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:08:59.517+05:30  INFO [employee-service,,] 9376 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-07-28T16:08:59.523+05:30  INFO [employee-service,,] 9376 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2023-07-28T16:08:59.524+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540739524, current=DOWN, previous=UP]
+2023-07-28T16:08:59.525+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:24cd95fcefea7e8ec55737ef79521031: registering service...
+2023-07-28T16:08:59.542+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:24cd95fcefea7e8ec55737ef79521031 - registration status: 204
+2023-07-28T16:08:59.580+05:30  INFO [employee-service,,] 9376 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-28T16:08:59.582+05:30  INFO [employee-service,,] 9376 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-28T16:08:59.588+05:30  WARN [employee-service,,] 9376 --- [Thread-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [AsyncReporter{org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender@63d54fb1}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ app//zipkin2.reporter.ByteBoundedQueue.drainTo(ByteBoundedQueue.java:81)
+ app//zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:270)
+ app//zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-28T16:08:59.608+05:30  INFO [employee-service,,] 9376 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:08:59.615+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-28T16:08:59.637+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-28T16:09:00.433+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-28T16:09:03.443+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-28T16:09:03.464+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:24cd95fcefea7e8ec55737ef79521031 - deregister  status: 200
+2023-07-28T16:09:03.467+05:30  INFO [employee-service,,] 9376 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-28T16:09:04.685+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Starting EmployeeServiceApplication using Java 17.0.7 with PID 9376 (C:\Users\hdhar\eclipse-workspace\employee-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\employee-service)
+2023-07-28T16:09:04.686+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T16:09:04.988+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-28T16:09:04.996+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2023-07-28T16:09:05.056+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8bde88c1-f7dd-35fb-a102-a8ddcbf19a06
+2023-07-28T16:09:05.127+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-28T16:09:05.128+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-28T16:09:05.128+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-28T16:09:05.158+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-28T16:09:05.158+05:30  INFO [employee-service,,] 9376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 470 ms
+2023-07-28T16:09:05.241+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-28T16:09:05.249+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:05.249+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-28T16:09:05.250+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-28T16:09:05.268+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e118b28
+2023-07-28T16:09:05.268+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-28T16:09:05.277+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:05.295+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-28T16:09:05.326+05:30  INFO [employee-service,,] 9376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:05.377+05:30  WARN [employee-service,,] 9376 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T16:09:06.581+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:06.682+05:30  WARN [employee-service,,] 9376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-28T16:09:07.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:07.812+05:30  INFO [employee-service,,] 9376 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-28T16:09:07.824+05:30  WARN [employee-service,,] 9376 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-28T16:09:07.826+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-28T16:09:07.861+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49987 (http) with context path ''
+2023-07-28T16:09:07.861+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 49987
+2023-07-28T16:09:07.862+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-28T16:09:07.865+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-28T16:09:07.865+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:09:07.872+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-28T16:09:07.873+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-28T16:09:07.895+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-28T16:09:07.896+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-28T16:09:07.897+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-28T16:09:07.899+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690540747899 with initial instances count: 7
+2023-07-28T16:09:07.900+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2023-07-28T16:09:07.901+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540747901, current=UP, previous=STARTING]
+2023-07-28T16:09:07.901+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5e64ccb0c78f472f3ac085ae7a268b7a: registering service...
+2023-07-28T16:09:07.911+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5e64ccb0c78f472f3ac085ae7a268b7a - registration status: 204
+2023-07-28T16:09:09.023+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:09.031+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Started EmployeeServiceApplication in 5.502 seconds (process running for 715.472)
+2023-07-28T16:09:09.034+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-28T16:09:09.086+05:30  WARN [employee-service,,] 9376 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=employee-service, managementUrl=http://Hemanshu-PC:54368/actuator, healthUrl=http://Hemanshu-PC:54368/actuator/health, serviceUrl=http://Hemanshu-PC:54368/) at spring-boot-admin ([http://localhost:8888/instances]): null. Further attempts are logged on DEBUG level
+2023-07-28T16:09:19.006+05:30  INFO [employee-service,,] 9376 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-28T16:09:19.006+05:30  INFO [employee-service,,] 9376 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as de08351beb6d
+2023-07-28T16:09:19.007+05:30  INFO [employee-service,,] 9376 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-28T16:09:19.008+05:30  INFO [employee-service,,] 9376 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-28T16:09:20.409+05:30  INFO [employee-service,,] 9376 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-28T16:09:20.413+05:30  INFO [employee-service,,] 9376 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2023-07-28T16:09:20.414+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540760414, current=DOWN, previous=UP]
+2023-07-28T16:09:20.414+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5e64ccb0c78f472f3ac085ae7a268b7a: registering service...
+2023-07-28T16:09:20.423+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5e64ccb0c78f472f3ac085ae7a268b7a - registration status: 204
+2023-07-28T16:09:20.438+05:30  INFO [employee-service,,] 9376 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-28T16:09:20.439+05:30  INFO [employee-service,,] 9376 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-28T16:09:20.447+05:30  INFO [employee-service,,] 9376 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:20.448+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-07-28T16:09:20.462+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-07-28T16:09:21.477+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-28T16:09:24.485+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-28T16:09:24.490+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5e64ccb0c78f472f3ac085ae7a268b7a - deregister  status: 200
+2023-07-28T16:09:24.493+05:30  INFO [employee-service,,] 9376 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-28T16:09:25.690+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Starting EmployeeServiceApplication using Java 17.0.7 with PID 9376 (C:\Users\hdhar\eclipse-workspace\employee-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\employee-service)
+2023-07-28T16:09:25.690+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T16:09:25.936+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-28T16:09:25.942+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2023-07-28T16:09:25.992+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8bde88c1-f7dd-35fb-a102-a8ddcbf19a06
+2023-07-28T16:09:26.047+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-28T16:09:26.047+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-28T16:09:26.048+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-28T16:09:26.078+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-28T16:09:26.078+05:30  INFO [employee-service,,] 9376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 387 ms
+2023-07-28T16:09:26.152+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-28T16:09:26.161+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:26.161+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-28T16:09:26.162+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-07-28T16:09:26.172+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@729da115
+2023-07-28T16:09:26.173+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-07-28T16:09:26.181+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:26.199+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-28T16:09:26.225+05:30  INFO [employee-service,,] 9376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:26.271+05:30  WARN [employee-service,,] 9376 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T16:09:27.458+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:27.538+05:30  WARN [employee-service,,] 9376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-28T16:09:28.667+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:28.688+05:30  INFO [employee-service,,] 9376 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-28T16:09:28.702+05:30  WARN [employee-service,,] 9376 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-28T16:09:28.705+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-28T16:09:28.797+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50741 (http) with context path ''
+2023-07-28T16:09:28.798+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 50741
+2023-07-28T16:09:28.802+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-28T16:09:28.806+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-28T16:09:28.807+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-28T16:09:28.808+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-28T16:09:28.826+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-28T16:09:28.829+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-28T16:09:28.830+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-28T16:09:28.831+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690540768831 with initial instances count: 7
+2023-07-28T16:09:28.833+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2023-07-28T16:09:28.833+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540768833, current=UP, previous=STARTING]
+2023-07-28T16:09:28.833+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:8d787cc9b12f54fb558365a7205e2215: registering service...
+2023-07-28T16:09:28.848+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:8d787cc9b12f54fb558365a7205e2215 - registration status: 204
+2023-07-28T16:09:29.083+05:30  INFO [employee-service,,] 9376 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-28T16:09:30.513+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:30.537+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Started EmployeeServiceApplication in 5.994 seconds (process running for 736.979)
+2023-07-28T16:09:30.539+05:30  INFO [employee-service,,] 9376 --- [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2023-07-28T16:09:30.542+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540770542, current=DOWN, previous=UP]
+2023-07-28T16:09:30.543+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:8d787cc9b12f54fb558365a7205e2215: registering service...
+2023-07-28T16:09:30.544+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-28T16:09:30.576+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:8d787cc9b12f54fb558365a7205e2215 - registration status: 204
+2023-07-28T16:09:30.664+05:30  INFO [employee-service,,] 9376 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-28T16:09:30.685+05:30  INFO [employee-service,,] 9376 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:30.687+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-07-28T16:09:30.709+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-07-28T16:09:31.724+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-28T16:09:34.094+05:30  WARN [employee-service,,] 9376 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=employee-service, managementUrl=http://Hemanshu-PC:49987/actuator, healthUrl=http://Hemanshu-PC:49987/actuator/health, serviceUrl=http://Hemanshu-PC:49987/) at spring-boot-admin ([http://localhost:8888/instances]): null. Further attempts are logged on DEBUG level
+2023-07-28T16:09:34.735+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-28T16:09:34.739+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:8d787cc9b12f54fb558365a7205e2215 - deregister  status: 200
+2023-07-28T16:09:34.742+05:30  INFO [employee-service,,] 9376 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-28T16:09:35.927+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Starting EmployeeServiceApplication using Java 17.0.7 with PID 9376 (C:\Users\hdhar\eclipse-workspace\employee-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\employee-service)
+2023-07-28T16:09:35.928+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T16:09:36.173+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-28T16:09:36.179+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2023-07-28T16:09:36.234+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8bde88c1-f7dd-35fb-a102-a8ddcbf19a06
+2023-07-28T16:09:36.296+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-28T16:09:36.296+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-28T16:09:36.296+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-28T16:09:36.325+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-28T16:09:36.326+05:30  INFO [employee-service,,] 9376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 397 ms
+2023-07-28T16:09:36.400+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-28T16:09:36.406+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:36.406+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-28T16:09:36.407+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-07-28T16:09:36.418+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7282a8d0
+2023-07-28T16:09:36.418+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-07-28T16:09:36.424+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:09:36.434+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-28T16:09:36.454+05:30  INFO [employee-service,,] 9376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:36.494+05:30  WARN [employee-service,,] 9376 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T16:09:37.677+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:37.770+05:30  WARN [employee-service,,] 9376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-28T16:09:38.878+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:38.883+05:30  INFO [employee-service,,] 9376 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-28T16:09:38.894+05:30  WARN [employee-service,,] 9376 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-28T16:09:38.896+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-28T16:09:38.918+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50932 (http) with context path ''
+2023-07-28T16:09:38.919+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 50932
+2023-07-28T16:09:38.919+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-28T16:09:38.921+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-28T16:09:38.921+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-28T16:09:38.922+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-28T16:09:38.936+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-28T16:09:38.937+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-28T16:09:38.938+05:30  INFO [employee-service,,] 9376 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-28T16:09:38.939+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690540778939 with initial instances count: 7
+2023-07-28T16:09:38.940+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2023-07-28T16:09:38.940+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540778940, current=UP, previous=STARTING]
+2023-07-28T16:09:38.940+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5785c62217daf88d87b2b4662572bf8f: registering service...
+2023-07-28T16:09:38.949+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5785c62217daf88d87b2b4662572bf8f - registration status: 204
+2023-07-28T16:09:40.056+05:30  INFO [employee-service,,] 9376 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:09:40.064+05:30  INFO [employee-service,,] 9376 --- [restartedMain] com.example.EmployeeServiceApplication   : Started EmployeeServiceApplication in 5.282 seconds (process running for 746.505)
+2023-07-28T16:09:40.066+05:30  INFO [employee-service,,] 9376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-28T16:09:46.030+05:30  WARN [employee-service,,] 9376 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=employee-service, managementUrl=http://Hemanshu-PC:50741/actuator, healthUrl=http://Hemanshu-PC:50741/actuator/health, serviceUrl=http://Hemanshu-PC:50741/) at spring-boot-admin ([http://localhost:8888/instances]): null. Further attempts are logged on DEBUG level
+2023-07-28T16:09:51.132+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-07-28T16:09:51.133+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2023-07-28T16:09:51.133+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690540791133, current=DOWN, previous=UP]
+2023-07-28T16:09:51.134+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5785c62217daf88d87b2b4662572bf8f: registering service...
+2023-07-28T16:09:51.139+05:30  INFO [employee-service,,] 9376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5785c62217daf88d87b2b4662572bf8f - registration status: 204
+2023-07-28T16:09:51.147+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-28T16:09:51.151+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:09:51.151+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-07-28T16:09:51.156+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-07-28T16:09:52.168+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-28T16:09:55.049+05:30  WARN [employee-service,,] 9376 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=employee-service, managementUrl=http://Hemanshu-PC:50932/actuator, healthUrl=http://Hemanshu-PC:50932/actuator/health, serviceUrl=http://Hemanshu-PC:50932/) at spring-boot-admin ([http://localhost:8888/instances]): null. Further attempts are logged on DEBUG level
+2023-07-28T16:09:55.172+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-28T16:09:55.176+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:5785c62217daf88d87b2b4662572bf8f - deregister  status: 200
+2023-07-28T16:09:55.178+05:30  INFO [employee-service,,] 9376 --- [RMI TCP Connection(25)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-28T16:17:28.063+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : Starting EmployeeServiceApplication using Java 17.0.7 with PID 23408 (C:\Users\hdhar\eclipse-workspace\employee-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\employee-service)
+2023-07-28T16:17:28.065+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T16:17:28.107+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-28T16:17:28.107+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-28T16:17:28.895+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-28T16:17:29.023+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interfaces.
+2023-07-28T16:17:29.205+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1183d99b-b982-363c-94ed-2a747409cfcf
+2023-07-28T16:17:29.703+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-28T16:17:29.711+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-28T16:17:29.711+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-28T16:17:29.778+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-28T16:17:29.778+05:30  INFO [employee-service,,] 23408 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1670 ms
+2023-07-28T16:17:30.213+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-28T16:17:30.256+05:30  INFO [employee-service,,] 23408 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-28T16:17:30.258+05:30  INFO [employee-service,,] 23408 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-28T16:17:30.367+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:17:30.468+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-28T16:17:30.482+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-28T16:17:30.718+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76488aaf
+2023-07-28T16:17:30.721+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-28T16:17:30.920+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:17:31.389+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-28T16:17:31.437+05:30  INFO [employee-service,,] 23408 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:17:31.650+05:30  WARN [employee-service,,] 23408 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T16:17:33.010+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:17:33.254+05:30  WARN [employee-service,,] 23408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-28T16:17:34.378+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:17:34.389+05:30  INFO [employee-service,,] 23408 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-28T16:17:34.419+05:30  WARN [employee-service,,] 23408 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-28T16:17:34.423+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-28T16:17:34.516+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59535 (http) with context path ''
+2023-07-28T16:17:34.518+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59535
+2023-07-28T16:17:34.522+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-28T16:17:34.551+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-28T16:17:34.555+05:30  INFO [employee-service,,] 23408 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:17:34.573+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-28T16:17:34.573+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-28T16:17:34.573+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-28T16:17:34.573+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-28T16:17:34.574+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-28T16:17:34.574+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-28T16:17:34.574+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-28T16:17:34.737+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-28T16:17:34.739+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-28T16:17:34.741+05:30  INFO [employee-service,,] 23408 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-28T16:17:34.745+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690541254744 with initial instances count: 5
+2023-07-28T16:17:34.747+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2023-07-28T16:17:34.747+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690541254747, current=UP, previous=STARTING]
+2023-07-28T16:17:34.748+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:6cfa43111507035f53094484550dc46e: registering service...
+2023-07-28T16:17:34.778+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:6cfa43111507035f53094484550dc46e - registration status: 204
+2023-07-28T16:17:35.877+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:17:35.895+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : Started EmployeeServiceApplication in 9.35 seconds (process running for 10.088)
+2023-07-28T16:17:36.253+05:30  INFO [employee-service,,] 23408 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-28T16:17:36.254+05:30  INFO [employee-service,,] 23408 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-28T16:17:36.255+05:30  INFO [employee-service,,] 23408 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-28T16:17:46.069+05:30  INFO [employee-service,,] 23408 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 9c28815ac5cd
+2023-07-28T16:18:04.747+05:30  WARN [employee-service,64c39ce49695a9264c1dbbd74efefef3,4c1dbbd74efefef3] 23408 --- [http-nio-auto-1-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named abc not found...]
+2023-07-28T16:18:06.920+05:30  WARN [employee-service,64c39ce67afa84e155c1ddfc414482f8,55c1ddfc414482f8] 23408 --- [http-nio-auto-1-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named abc not found...]
+2023-07-28T16:18:11.522+05:30  WARN [employee-service,64c39ceb792c987380cb8e42a6dec7fe,80cb8e42a6dec7fe] 23408 --- [http-nio-auto-1-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named abc not found...]
+2023-07-28T16:18:12.506+05:30  WARN [employee-service,64c39cecada4acf791281fd85786df83,91281fd85786df83] 23408 --- [http-nio-auto-1-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named abc not found...]
+2023-07-28T16:18:26.796+05:30  INFO [employee-service,,] 23408 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-28T16:18:26.798+05:30  INFO [employee-service,,] 23408 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2023-07-28T16:18:26.798+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690541306798, current=DOWN, previous=UP]
+2023-07-28T16:18:26.798+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:6cfa43111507035f53094484550dc46e: registering service...
+2023-07-28T16:18:26.804+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:6cfa43111507035f53094484550dc46e - registration status: 204
+2023-07-28T16:18:26.816+05:30  INFO [employee-service,,] 23408 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-28T16:18:26.817+05:30  INFO [employee-service,,] 23408 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-28T16:18:26.830+05:30  INFO [employee-service,,] 23408 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:18:26.833+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-28T16:18:26.845+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-28T16:18:27.865+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-28T16:18:30.868+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-28T16:18:30.927+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:6cfa43111507035f53094484550dc46e - deregister  status: 200
+2023-07-28T16:18:30.931+05:30  INFO [employee-service,,] 23408 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-28T16:18:32.157+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : Starting EmployeeServiceApplication using Java 17.0.7 with PID 23408 (C:\Users\hdhar\eclipse-workspace\employee-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\employee-service)
+2023-07-28T16:18:32.157+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T16:18:32.462+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-28T16:18:32.470+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interfaces.
+2023-07-28T16:18:32.539+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1183d99b-b982-363c-94ed-2a747409cfcf
+2023-07-28T16:18:32.623+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-28T16:18:32.623+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-28T16:18:32.623+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-28T16:18:32.652+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-28T16:18:32.652+05:30  INFO [employee-service,,] 23408 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 494 ms
+2023-07-28T16:18:32.731+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-28T16:18:32.738+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:18:32.738+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-28T16:18:32.739+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-28T16:18:32.752+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a7d5793
+2023-07-28T16:18:32.753+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-28T16:18:32.759+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-28T16:18:32.776+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-28T16:18:32.802+05:30  INFO [employee-service,,] 23408 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-28T16:18:32.846+05:30  WARN [employee-service,,] 23408 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T16:18:34.041+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:18:34.125+05:30  WARN [employee-service,,] 23408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-28T16:18:35.237+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:18:35.245+05:30  INFO [employee-service,,] 23408 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-28T16:18:35.258+05:30  WARN [employee-service,,] 23408 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-28T16:18:35.260+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-28T16:18:35.294+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60579 (http) with context path ''
+2023-07-28T16:18:35.294+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 60579
+2023-07-28T16:18:35.295+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-28T16:18:35.298+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-28T16:18:35.298+05:30  INFO [employee-service,,] 23408 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-28T16:18:35.305+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-28T16:18:35.306+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-28T16:18:35.327+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-28T16:18:35.328+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-28T16:18:35.329+05:30  INFO [employee-service,,] 23408 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-28T16:18:35.330+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690541315330 with initial instances count: 5
+2023-07-28T16:18:35.332+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2023-07-28T16:18:35.332+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690541315332, current=UP, previous=STARTING]
+2023-07-28T16:18:35.332+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:80e81bf888d96de95a1cc8389cee8bd8: registering service...
+2023-07-28T16:18:35.351+05:30  INFO [employee-service,,] 23408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/employee-service:80e81bf888d96de95a1cc8389cee8bd8 - registration status: 204
+2023-07-28T16:18:36.454+05:30  INFO [employee-service,,] 23408 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-28T16:18:36.471+05:30  INFO [employee-service,,] 23408 --- [restartedMain] com.example.EmployeeServiceApplication   : Started EmployeeServiceApplication in 5.475 seconds (process running for 70.665)
+2023-07-28T16:18:36.474+05:30  INFO [employee-service,,] 23408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-28T16:18:41.478+05:30  INFO [employee-service,,] 23408 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 95bd68ca6ed7
+2023-07-28T16:18:41.478+05:30  INFO [employee-service,,] 23408 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-28T16:18:41.478+05:30  INFO [employee-service,,] 23408 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-28T16:18:41.480+05:30  INFO [employee-service,,] 23408 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-28T16:19:03.747+05:30  WARN [employee-service,64c39d1f664f4f54f182b21b9e376ea0,f182b21b9e376ea0] 23408 --- [http-nio-auto-2-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named 'abc' not found...]
+2023-07-28T16:19:06.423+05:30  WARN [employee-service,64c39d223d4e9e1a7cedb78179102c47,7cedb78179102c47] 23408 --- [http-nio-auto-2-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named 'abc' not found...]
+2023-07-28T16:19:06.925+05:30  WARN [employee-service,64c39d22b070b70676ca0642772c5129,76ca0642772c5129] 23408 --- [http-nio-auto-2-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named 'abc' not found...]
+2023-07-28T16:19:26.085+05:30  WARN [employee-service,64c39d3648b039496cd56da42f536fdc,6cd56da42f536fdc] 23408 --- [http-nio-auto-2-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.exception.DeptNotFoundException: Department named 'ABC' not found...]

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.exception.DeptNotFoundException;
 import com.example.model.EmployeeEntity;
 import com.example.service.EmployeeService;
 import com.example.ui.DepartmentDto;
@@ -33,14 +34,20 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/{departmentName}")
-	public ResponseEntity<?> createEmployee(@RequestBody EmployeeEntity employee,@PathVariable String departmentName) {
+	public ResponseEntity<?> createEmployee(@RequestBody EmployeeEntity employee,@PathVariable String departmentName) throws DeptNotFoundException {
 
 		ResponseEntity<DepartmentDto> o = restTemplate.getForEntity("http://localhost:9999/DEPARTMENT-SERVICE/departments/" + departmentName,
 				DepartmentDto.class);
 
 		DepartmentDto dto = o.getBody();
-		employee.setDepartmentId(dto.getDepartmentId());
-		employee.setDepartmentName(dto.getDepartmentName());
-		return ResponseEntity.status(HttpStatus.CREATED).body(employeeService.createEmployee(employee));
+		if(dto == null)
+		{
+			throw new DeptNotFoundException("Department named '"+departmentName+"' not found...");
+		}
+		else {			
+			employee.setDepartmentId(dto.getDepartmentId());
+			employee.setDepartmentName(dto.getDepartmentName());
+			return ResponseEntity.status(HttpStatus.CREATED).body(employeeService.createEmployee(employee));
+		}
 	}
 }

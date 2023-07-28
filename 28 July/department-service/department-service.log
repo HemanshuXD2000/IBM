@@ -11038,3 +11038,6 @@ If you want to disable this check, just set the property [spring.cloud.compatibi
 2023-07-28T15:58:27.671+05:30  INFO [department-service,,] 20772 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-07-28T15:58:32.202+05:30  INFO [department-service,,] 20772 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as bba8ba77adc3
 2023-07-28T16:03:25.796+05:30  INFO [department-service,,] 20772 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:08:25.801+05:30  INFO [department-service,,] 20772 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:13:25.802+05:30  INFO [department-service,,] 20772 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-28T16:18:25.808+05:30  INFO [department-service,,] 20772 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
