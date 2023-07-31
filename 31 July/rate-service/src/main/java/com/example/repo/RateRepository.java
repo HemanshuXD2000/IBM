@@ -7,5 +7,6 @@ import com.example.model.Rate;
 
 @EnableMongoRepositories
 public interface RateRepository extends MongoRepository<Rate, String>{
-
+ 
+	Rate findByFromAndTo(String from, String to);
 }

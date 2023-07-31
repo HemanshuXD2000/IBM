@@ -18,4 +18,10 @@ public class RateServiceImpl implements RateService{
 		return rateRepository.save(rate);
 	}
 
+	@Override
+	public Rate findRate(String fromCurrency, String toCurrency) {
+		// TODO Auto-generated method stub
+		return rateRepository.findByFromAndTo(fromCurrency, toCurrency);
+	}
+
 }

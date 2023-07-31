@@ -17,7 +17,7 @@ public class Rate {
 	private String rateId;
 	private String from;
 	private String to;
-	private int value;
+	private double value;
 
 	public Rate(String from, String to, int value) {
 		super();
