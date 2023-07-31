@@ -1,0 +1,619 @@
+2023-07-31 09:37:57.075  INFO 2052 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 2052 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 09:37:57.076  INFO 2052 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 09:37:57.122  INFO 2052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 09:37:57.123  INFO 2052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 09:37:58.046  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:37:58.048  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 09:37:58.206  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interfaces.
+2023-07-31 09:37:58.214  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:37:58.215  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 09:37:58.221  INFO 2052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 09:37:58.450  INFO 2052 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 09:37:58.960  INFO 2052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 09:37:58.969  INFO 2052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 09:37:58.969  INFO 2052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 09:37:59.067  INFO 2052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 09:37:59.068  INFO 2052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1944 ms
+2023-07-31 09:37:59.128 ERROR 2052 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 09:37:59.154  INFO 2052 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 09:37:59.159  WARN 2052 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 09:37:59.172  INFO 2052 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 09:37:59.192 ERROR 2052 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 09:38:19.282  INFO 24636 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 24636 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 09:38:19.283  INFO 24636 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 09:38:19.323  INFO 24636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 09:38:19.323  INFO 24636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 09:38:20.107  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:38:20.108  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 09:38:20.230  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+2023-07-31 09:38:20.239  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:38:20.239  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 09:38:20.245  INFO 24636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 09:38:20.465  INFO 24636 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 09:38:20.980  INFO 24636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 09:38:20.988  INFO 24636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 09:38:20.988  INFO 24636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 09:38:21.076  INFO 24636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 09:38:21.076  INFO 24636 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1752 ms
+2023-07-31 09:38:21.126 ERROR 24636 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 09:38:21.145  INFO 24636 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 09:38:21.150  WARN 24636 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 09:38:21.162  INFO 24636 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 09:38:21.180 ERROR 24636 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 09:38:50.153  INFO 8320 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 8320 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 09:38:50.155  INFO 8320 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 09:38:50.192  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 09:38:50.193  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 09:38:51.008  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:38:51.009  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 09:38:51.128  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+2023-07-31 09:38:51.135  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:38:51.135  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 09:38:51.139  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 09:38:51.376  INFO 8320 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 09:38:51.884  INFO 8320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 09:38:51.895  INFO 8320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 09:38:51.896  INFO 8320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 09:38:51.987  INFO 8320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 09:38:51.989  INFO 8320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1796 ms
+2023-07-31 09:38:52.057 ERROR 8320 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 09:38:52.078  INFO 8320 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 09:38:52.084  WARN 8320 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 09:38:52.097  INFO 8320 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 09:38:52.114 ERROR 8320 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 09:42:53.691  INFO 2200 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 2200 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 09:42:53.692  INFO 2200 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 09:42:53.724  INFO 2200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 09:42:53.725  INFO 2200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 09:42:54.470  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:42:54.470  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 09:42:54.582  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interfaces.
+2023-07-31 09:42:54.588  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:42:54.588  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 09:42:54.592  INFO 2200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 09:42:54.759  INFO 2200 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 09:42:55.251  INFO 2200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 09:42:55.258  INFO 2200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 09:42:55.259  INFO 2200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 09:42:55.362  INFO 2200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 09:42:55.363  INFO 2200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1638 ms
+2023-07-31 09:42:55.429 ERROR 2200 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 09:42:55.448  INFO 2200 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 09:42:55.454  WARN 2200 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 09:42:55.466  INFO 2200 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 09:42:55.484 ERROR 2200 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 09:48:22.959  INFO 10984 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 10984 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 09:48:22.961  INFO 10984 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 09:48:23.001  INFO 10984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 09:48:23.001  INFO 10984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 09:48:23.724  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:48:23.726  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 09:48:23.847  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+2023-07-31 09:48:23.854  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 09:48:23.855  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 09:48:23.861  INFO 10984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 09:48:24.039  INFO 10984 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 09:48:24.509  INFO 10984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 09:48:24.516  INFO 10984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 09:48:24.517  INFO 10984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 09:48:24.604  INFO 10984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 09:48:24.604  INFO 10984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1603 ms
+2023-07-31 09:48:24.666 ERROR 10984 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 09:48:24.683  INFO 10984 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 09:48:24.689  WARN 10984 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 09:48:24.706  INFO 10984 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 09:48:24.728 ERROR 10984 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 10:00:28.879  INFO 13064 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 13064 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:00:28.880  INFO 13064 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:00:28.913  INFO 13064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 10:00:28.914  INFO 13064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 10:00:29.636  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:00:29.638  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 10:00:29.662  INFO 13064 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.example.repo.RateRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-07-31 10:00:29.663  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2023-07-31 10:00:29.668  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:00:29.669  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:00:29.753  INFO 13064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:00:29.927  INFO 13064 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 10:00:30.407  INFO 13064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:00:30.414  INFO 13064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:00:30.414  INFO 13064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:00:30.498  INFO 13064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:00:30.499  INFO 13064 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
+2023-07-31 10:00:30.549 ERROR 13064 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 10:00:30.565  INFO 13064 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:00:30.571  WARN 13064 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 10:00:30.581  INFO 13064 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 10:00:30.599 ERROR 13064 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 10:00:57.930  INFO 16520 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 16520 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:00:57.931  INFO 16520 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:00:57.965  INFO 16520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 10:00:57.965  INFO 16520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 10:00:58.686  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:00:58.687  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 10:00:58.710  INFO 16520 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.example.repo.RateRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-07-31 10:00:58.711  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-07-31 10:00:58.715  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:00:58.715  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:00:58.802  INFO 16520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:00:58.974  INFO 16520 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 10:00:59.407  INFO 16520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:00:59.415  INFO 16520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:00:59.415  INFO 16520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:00:59.495  INFO 16520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:00:59.495  INFO 16520 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1529 ms
+2023-07-31 10:00:59.547 ERROR 16520 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 10:00:59.564  INFO 16520 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:00:59.569  WARN 16520 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 10:00:59.582  INFO 16520 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 10:00:59.602 ERROR 16520 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 10:03:22.231  INFO 24920 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 24920 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:03:22.232  INFO 24920 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:03:22.267  INFO 24920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 10:03:22.267  INFO 24920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 10:03:23.021  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:03:23.023  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 10:03:23.050  INFO 24920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.example.repo.RateRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-07-31 10:03:23.051  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2023-07-31 10:03:23.055  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:03:23.055  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:03:23.145  INFO 24920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:03:23.312  INFO 24920 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 10:03:23.834  INFO 24920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:03:23.842  INFO 24920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:03:23.842  INFO 24920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:03:23.928  INFO 24920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:03:23.929  INFO 24920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
+2023-07-31 10:03:23.983 ERROR 24920 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 10:03:24.003  INFO 24920 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:03:24.010  WARN 24920 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 10:03:24.022  INFO 24920 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 10:03:24.039 ERROR 24920 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 10:05:22.237  INFO 22452 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 22452 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:05:22.238  INFO 22452 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:05:22.273  INFO 22452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 10:05:22.273  INFO 22452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 10:05:23.053  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:05:23.056  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 10:05:23.082  INFO 22452 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.example.repo.RateRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-07-31 10:05:23.083  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2023-07-31 10:05:23.087  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-31 10:05:23.087  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:05:23.185  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:05:23.375  INFO 22452 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c032d71-49cb-3f89-9000-723fe591dca9
+2023-07-31 10:05:23.886  INFO 22452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:05:23.896  INFO 22452 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:05:23.897  INFO 22452 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:05:23.988  INFO 22452 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:05:23.988  INFO 22452 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1715 ms
+2023-07-31 10:05:24.062 ERROR 22452 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-07-31 10:05:24.084  INFO 22452 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:05:24.090  WARN 22452 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-07-31 10:05:24.106  INFO 22452 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 10:05:24.125 ERROR 22452 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-07-31 10:09:02.730  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 21080 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:09:02.732  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:09:02.765  INFO 21080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 10:09:02.765  INFO 21080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 10:09:03.401  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:09:03.510  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:09:03.658  INFO 21080 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8a8cd95f-4a1d-3893-b6fa-5d245bd4dd7c
+2023-07-31 10:09:04.055  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:09:04.062  INFO 21080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:09:04.063  INFO 21080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:09:04.140  INFO 21080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:09:04.140  INFO 21080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1374 ms
+2023-07-31 10:09:04.377  INFO 21080 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.7+7"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@1aa66e60], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@37a21433]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@2e52c394], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-31 10:09:04.387  INFO 21080 --- [cluster-rtt-ClusterId{value='64c73ae864c725777bb62bc7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:20}] to localhost:27017
+2023-07-31 10:09:04.387  INFO 21080 --- [cluster-ClusterId{value='64c73ae864c725777bb62bc7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:21}] to localhost:27017
+2023-07-31 10:09:04.388  INFO 21080 --- [cluster-ClusterId{value='64c73ae864c725777bb62bc7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16523100}
+2023-07-31 10:09:04.434  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:09:04.495  WARN 21080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-31 10:09:04.531  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:09:05.956  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:09:07.359  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:09:07.367  INFO 21080 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-31 10:09:07.401  WARN 21080 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-31 10:09:07.405  INFO 21080 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-31 10:09:07.478  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53787 (http) with context path ''
+2023-07-31 10:09:07.478  INFO 21080 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53787
+2023-07-31 10:09:07.483  INFO 21080 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-31 10:09:07.509  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-31 10:09:07.513  INFO 21080 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-31 10:09:07.531  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-31 10:09:07.810  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-31 10:09:07.812  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-31 10:09:07.819  INFO 21080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-31 10:09:07.825  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690778347824 with initial instances count: 0
+2023-07-31 10:09:07.826  INFO 21080 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RATE-SERVICE with eureka with status UP
+2023-07-31 10:09:07.826  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690778347826, current=UP, previous=STARTING]
+2023-07-31 10:09:07.827  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:0b22935110011570433c92ea74e306bc: registering service...
+2023-07-31 10:09:07.950  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:0b22935110011570433c92ea74e306bc - registration status: 204
+2023-07-31 10:09:08.951  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:09:08.967  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Started RateServiceApplication in 7.728 seconds (JVM running for 8.42)
+2023-07-31 10:09:09.350  INFO 21080 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 10:09:09.351  INFO 21080 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-31 10:09:09.352  INFO 21080 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-31 10:09:14.001  INFO 21080 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as a7aab9c3aa40
+2023-07-31 10:09:14.104  INFO 21080 --- [http-nio-auto-1-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:22}] to localhost:27017
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2023-07-31 10:09:37.829  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-31 10:09:37.840  INFO 21080 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-31 10:11:29.385  WARN 21080 --- [http-nio-auto-1-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-07-31 10:14:07.547  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:15:21.617  INFO 21080 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-31 10:15:21.622  INFO 21080 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RATE-SERVICE with eureka with status DOWN
+2023-07-31 10:15:21.624  INFO 21080 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690778721624, current=DOWN, previous=UP]
+2023-07-31 10:15:21.625  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:0b22935110011570433c92ea74e306bc: registering service...
+2023-07-31 10:15:21.640  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:0b22935110011570433c92ea74e306bc - registration status: 204
+2023-07-31 10:15:21.664  INFO 21080 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:15:21.667  INFO 21080 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-31 10:15:21.708  INFO 21080 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-31 10:15:24.721  INFO 21080 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-31 10:15:24.733  INFO 21080 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:0b22935110011570433c92ea74e306bc - deregister  status: 200
+2023-07-31 10:15:24.739  INFO 21080 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-31 10:15:26.016  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 21080 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:15:26.017  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:15:26.283  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:15:26.289  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:15:26.346  INFO 21080 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8a8cd95f-4a1d-3893-b6fa-5d245bd4dd7c
+2023-07-31 10:15:26.385  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:15:26.386  INFO 21080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:15:26.386  INFO 21080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:15:26.409  INFO 21080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:15:26.409  INFO 21080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
+2023-07-31 10:15:26.446  INFO 21080 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.7+7"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@5118a422], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@37a21433]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@e079ba8], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-31 10:15:26.449  INFO 21080 --- [cluster-ClusterId{value='64c73c6664c725777bb62bc8', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:23}] to localhost:27017
+2023-07-31 10:15:26.449  INFO 21080 --- [cluster-rtt-ClusterId{value='64c73c6664c725777bb62bc8', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:24}] to localhost:27017
+2023-07-31 10:15:26.450  INFO 21080 --- [cluster-ClusterId{value='64c73c6664c725777bb62bc8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1274100}
+2023-07-31 10:15:26.451  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:15:26.468  WARN 21080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-31 10:15:26.480  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:15:27.696  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:15:28.868  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:15:28.872  INFO 21080 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-31 10:15:28.887  WARN 21080 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-31 10:15:28.890  INFO 21080 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-31 10:15:28.912  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60201 (http) with context path ''
+2023-07-31 10:15:28.912  INFO 21080 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 60201
+2023-07-31 10:15:28.913  INFO 21080 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-31 10:15:28.916  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-31 10:15:28.916  INFO 21080 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-31 10:15:28.927  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-31 10:15:28.945  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-31 10:15:28.946  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-31 10:15:28.946  INFO 21080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-31 10:15:28.948  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690778728948 with initial instances count: 2
+2023-07-31 10:15:28.949  INFO 21080 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RATE-SERVICE with eureka with status UP
+2023-07-31 10:15:28.949  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690778728949, current=UP, previous=STARTING]
+2023-07-31 10:15:28.949  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:1eba94dd6c7e8fd865784f0d505dc06f: registering service...
+2023-07-31 10:15:28.961  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:1eba94dd6c7e8fd865784f0d505dc06f - registration status: 204
+2023-07-31 10:15:30.069  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:15:30.079  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Started RateServiceApplication in 5.282 seconds (JVM running for 389.532)
+2023-07-31 10:15:30.082  INFO 21080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-31 10:15:40.061  INFO 21080 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 10:15:40.061  INFO 21080 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-31 10:15:40.061  INFO 21080 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as d9dd7ef23409
+2023-07-31 10:15:40.063  INFO 21080 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-31 10:15:40.069  INFO 21080 --- [http-nio-auto-2-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:25}] to localhost:27017
+2023-07-31 10:15:56.502  WARN 21080 --- [http-nio-auto-2-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-07-31 10:20:28.932  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:21:52.345  INFO 21080 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-07-31 10:21:52.346  INFO 21080 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RATE-SERVICE with eureka with status DOWN
+2023-07-31 10:21:52.347  INFO 21080 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690779112347, current=DOWN, previous=UP]
+2023-07-31 10:21:52.347  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:1eba94dd6c7e8fd865784f0d505dc06f: registering service...
+2023-07-31 10:21:52.355  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:1eba94dd6c7e8fd865784f0d505dc06f - registration status: 204
+2023-07-31 10:21:52.361  INFO 21080 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:21:52.364  INFO 21080 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-31 10:21:52.407  INFO 21080 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-31 10:21:55.409  INFO 21080 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-31 10:21:55.416  INFO 21080 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:1eba94dd6c7e8fd865784f0d505dc06f - deregister  status: 200
+2023-07-31 10:21:55.417  INFO 21080 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-31 10:21:56.659  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 21080 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:21:56.659  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:21:56.856  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:21:56.872  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:21:56.912  INFO 21080 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8a8cd95f-4a1d-3893-b6fa-5d245bd4dd7c
+2023-07-31 10:21:56.954  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:21:56.956  INFO 21080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:21:56.956  INFO 21080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:21:56.978  INFO 21080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:21:56.978  INFO 21080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 317 ms
+2023-07-31 10:21:57.007  INFO 21080 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.7+7"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@3eb4f7eb], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@37a21433]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@41a1c228], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-31 10:21:57.010  INFO 21080 --- [cluster-rtt-ClusterId{value='64c73ded64c725777bb62bc9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:28}] to localhost:27017
+2023-07-31 10:21:57.010  INFO 21080 --- [cluster-ClusterId{value='64c73ded64c725777bb62bc9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:27}] to localhost:27017
+2023-07-31 10:21:57.010  INFO 21080 --- [cluster-ClusterId{value='64c73ded64c725777bb62bc9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1123300}
+2023-07-31 10:21:57.010  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:21:57.021  WARN 21080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-31 10:21:57.029  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:21:58.196  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:21:59.348  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:21:59.352  INFO 21080 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-31 10:21:59.364  WARN 21080 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-31 10:21:59.367  INFO 21080 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-31 10:21:59.383  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51076 (http) with context path ''
+2023-07-31 10:21:59.384  INFO 21080 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 51076
+2023-07-31 10:21:59.384  INFO 21080 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-31 10:21:59.385  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-31 10:21:59.386  INFO 21080 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:21:59.386  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-31 10:21:59.386  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-31 10:21:59.386  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-31 10:21:59.387  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-31 10:21:59.387  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-31 10:21:59.387  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-31 10:21:59.387  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-31 10:21:59.400  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-31 10:21:59.401  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-31 10:21:59.401  INFO 21080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-31 10:21:59.402  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690779119402 with initial instances count: 2
+2023-07-31 10:21:59.403  INFO 21080 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RATE-SERVICE with eureka with status UP
+2023-07-31 10:21:59.403  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690779119403, current=UP, previous=STARTING]
+2023-07-31 10:21:59.403  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:62322d914449e4dd5b82e9633ce10f1a: registering service...
+2023-07-31 10:21:59.411  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:62322d914449e4dd5b82e9633ce10f1a - registration status: 204
+2023-07-31 10:21:59.666  INFO 21080 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 10 class path changes (0 additions, 0 deletions, 10 modifications)
+2023-07-31 10:22:00.501  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:22:00.510  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Started RateServiceApplication in 5.031 seconds (JVM running for 779.963)
+2023-07-31 10:22:00.511  INFO 21080 --- [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RATE-SERVICE with eureka with status DOWN
+2023-07-31 10:22:00.511  INFO 21080 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690779120511, current=DOWN, previous=UP]
+2023-07-31 10:22:00.511  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:62322d914449e4dd5b82e9633ce10f1a: registering service...
+2023-07-31 10:22:00.512  INFO 21080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-31 10:22:00.515  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:62322d914449e4dd5b82e9633ce10f1a - registration status: 204
+2023-07-31 10:22:00.521  INFO 21080 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 10:22:00.526  INFO 21080 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-07-31 10:22:03.527  INFO 21080 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-07-31 10:22:03.532  INFO 21080 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:62322d914449e4dd5b82e9633ce10f1a - deregister  status: 200
+2023-07-31 10:22:03.534  INFO 21080 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-07-31 10:22:04.713  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Starting RateServiceApplication using Java 17.0.7 on Hemanshu-PC with PID 21080 (C:\Users\hdhar\eclipse-workspace\rate-service\target\classes started by hdhar in C:\Users\hdhar\eclipse-workspace\rate-service)
+2023-07-31 10:22:04.713  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-31 10:22:04.903  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-31 10:22:04.908  INFO 21080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 MongoDB repository interfaces.
+2023-07-31 10:22:04.945  INFO 21080 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8a8cd95f-4a1d-3893-b6fa-5d245bd4dd7c
+2023-07-31 10:22:04.974  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-07-31 10:22:04.975  INFO 21080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 10:22:04.975  INFO 21080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-07-31 10:22:04.997  INFO 21080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 10:22:04.998  INFO 21080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 284 ms
+2023-07-31 10:22:05.026  INFO 21080 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/17.0.7+7"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@b1588ce], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@37a21433]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@63c40b], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-31 10:22:05.027  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:22:05.028  INFO 21080 --- [cluster-ClusterId{value='64c73df564c725777bb62bca', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:30}] to localhost:27017
+2023-07-31 10:22:05.028  INFO 21080 --- [cluster-rtt-ClusterId{value='64c73df564c725777bb62bca', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:29}] to localhost:27017
+2023-07-31 10:22:05.028  INFO 21080 --- [cluster-ClusterId{value='64c73df564c725777bb62bca', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1774000}
+2023-07-31 10:22:05.040  WARN 21080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-31 10:22:05.048  WARN 21080 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-07-31 10:22:06.214  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:22:07.383  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:22:07.387  INFO 21080 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-07-31 10:22:07.397  WARN 21080 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-07-31 10:22:07.399  INFO 21080 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-07-31 10:22:07.414  INFO 21080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51222 (http) with context path ''
+2023-07-31 10:22:07.415  INFO 21080 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 51222
+2023-07-31 10:22:07.415  INFO 21080 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-07-31 10:22:07.417  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-07-31 10:22:07.417  INFO 21080 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-07-31 10:22:07.418  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-07-31 10:22:07.432  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-07-31 10:22:07.432  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-07-31 10:22:07.433  INFO 21080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-07-31 10:22:07.433  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1690779127433 with initial instances count: 2
+2023-07-31 10:22:07.434  INFO 21080 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RATE-SERVICE with eureka with status UP
+2023-07-31 10:22:07.434  INFO 21080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1690779127434, current=UP, previous=STARTING]
+2023-07-31 10:22:07.434  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:cb3e31b140e3a62e52ad52d0844df91b: registering service...
+2023-07-31 10:22:07.444  INFO 21080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RATE-SERVICE/rate-service:cb3e31b140e3a62e52ad52d0844df91b - registration status: 204
+2023-07-31 10:22:08.547  INFO 21080 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-07-31 10:22:08.556  INFO 21080 --- [restartedMain] com.example.RateServiceApplication       : Started RateServiceApplication in 4.979 seconds (JVM running for 788.008)
+2023-07-31 10:22:08.558  INFO 21080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-31 10:22:15.490  INFO 21080 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 70273efb5198
+2023-07-31 10:22:23.512  INFO 21080 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 6d1df470745a
+2023-07-31 10:22:23.515  INFO 21080 --- [http-nio-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 10:22:23.515  INFO 21080 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-31 10:22:23.516  INFO 21080 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-31 10:22:23.521  INFO 21080 --- [http-nio-auto-4-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:11, serverValue:31}] to localhost:27017
+2023-07-31 10:27:07.421  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:32:07.437  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:37:07.439  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:42:07.442  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-07-31 10:47:07.454  INFO 21080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
