@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: location-service
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8888
+  zipkin:
+    base-url: http://localhost:9411
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    compatibility-verifier:
+      enabled: false
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/
+      database: playground
+server:
+  port: 0
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8777/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+logging:
+  file:
+    name: location-service.log
