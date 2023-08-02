@@ -1,54 +1,8 @@
-class Address
-{
-    private _addressLine1:string
-    private _addressLine2:string
-    private _city:string;
-
-    constructor(addressLine1: string, addressLine2: string, city: string) {
-        this._addressLine1 = addressLine1;
-        this._addressLine2 = addressLine2;
-        this._city = city;
-    }
-
-    get addressLine1(): string {
-        return this._addressLine1;
-    }
-
-    set addressLine1(value: string) {
-        this._addressLine1 = value;
-    }
-
-    get addressLine2(): string {
-        return this._addressLine2;
-    }
-
-    set addressLine2(value: string) {
-        this._addressLine2 = value;
-    }
-
-    get city(): string {
-        return this._city;
-    }
-
-    set city(value: string) {
-        this._city = value;
-    }
-}
-
-class Persons
+import { Address } from "./Address";
+export class Persons
 {
 
-    private _firstName:string;
-    private _lastName:string;
-    private _email:string;
-    private _address:Address;
-
-
-    constructor(firstName: string, lastName: string, email: string, address: Address) {
-        this._firstName = firstName;
-        this._lastName = lastName;
-        this._email = email;
-        this._address = address;
+    constructor(private _firstName:string, private _lastName:string, private _email:string, private _address:Address) {
     }
 
     get address(): Address {
@@ -85,12 +39,8 @@ class Persons
 
     getDetails(): string {
         return 'First Name: '+this._firstName+' \nLast Name: '+this._lastName+' \nEmail: '+this._email+
-            ' \nAddress Line 1: '+address.addressLine1+' \nAddress Line 2: '+address.addressLine2+' \nCity: '+address.city;
+            ' \nAddress Line 1: '+this.address.addressLine1+' \nAddress Line 2: '+this.address.addressLine2+' \nCity: '+this._address.city;
     }
 }
 
-let address = new Address("North America","Los Angeles","California")
 
-let person = new Persons("Tony","starks","ironmanTony@starks.inc",address);
-
-console.log(person.getDetails());
