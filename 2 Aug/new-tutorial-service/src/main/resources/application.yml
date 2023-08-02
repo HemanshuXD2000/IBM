@@ -1,0 +1,18 @@
+server:
+  port: 9999
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/hr
+    username: root
+    password: root
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
