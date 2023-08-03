@@ -1,0 +1,43 @@
+<br/>
+<h1>Form Template</h1>
+<hr/>
+<div><em>Template Driven Form</em></div>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <br/>
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="testData.name" name="name" />
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea class="form-control" id="comment" [(ngModel)]="testData.comments" name="comment" ></textarea>
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for="favColor">Favorite Color</label>
+   <select class="form-select" id="favColor" [(ngModel)]="testData.color" name="color">
+     <option *ngFor="let c of colors" value="{{c}}">{{c}}</option>
+   </select>
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for="favSeason">Favorite Season</label><br/>
+    <span *ngFor="let s of seasons">
+      <input class="form-check-label" type="radio" name="season"
+             value="{{s}}" [(ngModel)]="testData.season" id="favSeason" /> {{s}}
+    </span>
+    <br/>
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for="hobbies">Hobbies</label><br>
+    <span *ngFor="let h of hobbies; index as i">
+      <input class="form-check-label" type="checkbox" name="hobbies[{{i}}]"
+             value="{{h}}" [(ngModel)]="testData.hobbies[i]" id="hobbies" /> {{h}}
+    </span>
+  </div>
+  <br/>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
