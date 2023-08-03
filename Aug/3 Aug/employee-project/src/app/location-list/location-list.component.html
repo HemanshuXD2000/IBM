@@ -1,0 +1,14 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Location Name</th>
+    <th scope="col">City</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tempLocation of locationList">
+    <td>{{tempLocation.locationName}}</td>
+    <td>{{tempLocation.city}}</td>
+  </tr>
+  </tbody>
+</table>
