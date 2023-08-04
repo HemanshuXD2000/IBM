@@ -1,0 +1,23 @@
+<br/>
+<h1>Employee Form</h1>
+<hr/>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <br/>
+    <label for = "firstName">First Name</label>
+    <input type="text" id="firstName" class="form-control w-auto" [(ngModel)]="testData.firstName" name="firstName"/>
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for = "lastName">Last Name</label>
+    <input type="text" id="lastName" class="form-control w-auto" [(ngModel)]="testData.lastName" name="lastName" />
+    <br/>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" class="form-control w-auto" [(ngModel)]="testData.email" name="email"/>
+    <br/>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
