@@ -1,0 +1,21 @@
+<div class="container">
+  <h2> Tutorial List</h2>
+  <table class = "table table-striped">
+    <thead>
+    <tr>
+      <th> Tutorial ID </th>
+      <th> Description </th>
+      <th> Is Available </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let tempTutorial of tutorials" >
+      <td> {{ tempTutorial.tutorialId }} </td>
+      <td> {{ tempTutorial.description }} </td>
+      <td> {{ tempTutorial.isAvailable }} </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

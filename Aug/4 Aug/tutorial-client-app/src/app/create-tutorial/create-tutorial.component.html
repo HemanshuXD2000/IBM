@@ -1,0 +1,25 @@
+<div class="container">
+    <h3> Create Tutorial </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+      <div class="form-group">
+        <label> Description</label>
+        <input type="text" class ="form-control" id = "description"
+               [(ngModel)] = "tutorial.description" name = "description">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label>Is Available</label>
+        <br/>
+        <input type="radio" class ="form-check-input" id = "isAvailable1"
+               [(ngModel)] = "tutorial.isAvailable" name = "isAvailable" value="YES">
+        <label class="form-check-label">YES   </label>
+        <input type="radio" class ="form-check-input" id = "isAvailable2"
+               [(ngModel)] = "tutorial.isAvailable" name = "isAvailable" value="NO">
+        <label class="form-check-label">NO</label>
+      </div>
+      <br/>
+      <button class = "btn btn-success" type ="submit">Submit</button>
+
+    </form>
+</div>
