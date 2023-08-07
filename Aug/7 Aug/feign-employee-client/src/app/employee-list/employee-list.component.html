@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Employee List</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Department Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tempEmployee of employees">
+            <td>{{tempEmployee.employeeName}}</td>
+            <td>{{tempEmployee.departmentName}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
